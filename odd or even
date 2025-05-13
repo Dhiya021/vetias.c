@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+    int x;
+    scanf("%d", &x);
+    if(x%2) {
+        printf("Given no is odd");
+    } else {
+        printf("Given no is even");
+    }
+    return 0;
+}
+    
