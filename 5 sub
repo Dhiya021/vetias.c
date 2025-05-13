@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int s1, s2, s3, s4, s5, total, avg;
+    printf("Enter the first mark:");
+    scanf("%d", &s1);
+    printf("Enter the second mark:");
+    scanf("%d", &s2);
+    printf("Enter the third mark:");
+    scanf("%d", &s3);
+    printf("Enter the fourth mark:");
+    scanf("%d", &s4);
+    printf("Enter the fifth sub mark:");
+    scanf("%d", &s5);
+    total = s1+s2+s3+s4+s5;
+    printf("total mark is %d", total);
+    avg = total/5;
+    printf("avg is %d", avg);
+     
+     return 0;
+}
+    
