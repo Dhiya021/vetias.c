@@ -1,0 +1,72 @@
+#include <stdio.h>
+
+int isLeapYear(int year) {
+
+    return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+
+}
+
+int main() {
+
+    int dd, mm, yyyy;
+
+
+    scanf("%d/%d/%d", &dd, &mm, &yyyy);
+
+    int isValid = 1;
+
+
+    if (yyyy < 1900 || yyyy > 9999) {
+
+        isValid = 0;
+
+    }
+
+
+    else if (mm < 1 || mm > 12) {
+
+        isValid = 0;
+
+    }
+
+
+    else {
+
+        int maxDays;
+
+
+        if (mm == 2) {
+
+            maxDays = isLeapYear(yyyy) ? 29 : 28;
+
+        } else if (mm == 4 || mm == 6 || mm == 9 || mm == 11) {
+
+            maxDays = 30;
+
+        } else {
+
+            maxDays = 31;
+
+        }
+
+        if (dd < 1 || dd > maxDays) {
+
+            isValid = 0;
+
+        }
+
+    }
+
+    if (isValid) {
+
+        printf("Valid\n");
+
+    } else {
+
+        printf("Invalid\n");
+
+    }
+
+    return 0;
+
+}
